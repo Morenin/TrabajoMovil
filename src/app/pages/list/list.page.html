@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Listado fichas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Desde: </ion-label>
+    <ion-input type="date"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Hasta: </ion-label>
+    <ion-input type="date"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>Dia</ion-col>
+        <ion-col>Actividad</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-item >
+    <ion-grid>
+      <ion-row *ngFor="let ficha of fichas">
+        <ion-col>{{  ficha.date  }}</ion-col>
+        <ion-col>{{  ficha.activity  }}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
