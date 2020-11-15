@@ -20,14 +20,19 @@ const routes: Routes = [
     loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
   },
   { path: 'details/:id', loadChildren: './pages/todo-details/tododetails.module#TodoDetailsPageModule' },
-  { path: 'details', loadChildren: './pages/todo-details/tododetails.module#TodoDetailsPageModule' },  {
+  { path: 'details', loadChildren: './pages/todo-details/tododetails.module#TodoDetailsPageModule' },
+  {
     path: 'calendar',
     loadChildren: () => import('./pages/calendar/calendar.module').then( m => m.CalendarPageModule)
   },
   {
     path: 'ficha',
     loadChildren: () => import('./pages/ficha/ficha.module').then( m => m.FichaPageModule)
+  },  {
+    path: 'todo-details',
+    loadChildren: () => import('./pages/todo-details/todo-details.module').then( m => m.TodoDetailsPageModule)
   },
+
 
 ];
 
