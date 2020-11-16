@@ -10,7 +10,7 @@ import { NavController, LoadingController } from '@ionic/angular';
 })
 export class TodoDetailsPage implements OnInit {
   todo: TaskI = {
-    task: "",
+    task: '',
     priority: 0,
   };
   todoId = null;
@@ -24,7 +24,7 @@ export class TodoDetailsPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.todoId = this.route.snapshot.params['id'];
+    this.todoId = this.route.snapshot.params.id;
     if (this.todoId) {
       this.loadTodo();
     }
