@@ -10,8 +10,7 @@ export class CalendarPage  {
   date: string;
   type: 'string';
   constructor() { }
-
- 
+  
   çonChange($event) {
     console.log($event);
   }
